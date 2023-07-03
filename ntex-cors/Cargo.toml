@@ -1,18 +1,18 @@
 [package]
-name = "ntex-cors"
+name = "clia-ntex-cors-mod"
 version = "0.4.0"
 authors = ["ntex contributors <team@ntex.rs>"]
-description = "Cross-origin resource sharing (CORS) for ntex applications."
+description = "A mod to ntex-cors, not requiring an 'ORIGIN' header to produce CORS header."
 readme = "README.md"
 keywords = ["ntex", "web"]
 homepage = "https://ntex.rs"
-repository = "https://github.com/ntex-rs/ntex-extras.git"
-documentation = "https://docs.rs/ntex-cors/"
+repository = "https://github.com/clia-mod/ntex-extras.git"
+documentation = "https://docs.rs/clia-ntex-cors-mod/"
 license = "MIT"
 edition = "2018"
 
 [lib]
-name = "ntex_cors"
+name = "clia_ntex_cors_mod"
 path = "src/lib.rs"
 
 [dependencies]

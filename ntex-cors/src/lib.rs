@@ -765,16 +765,16 @@ where
             Ok(Either::Left(res)) => Either::Left(ok(req.into_response(res))),
             Ok(Either::Right(_)) => {
                 let inner = self.inner.clone();
-                let has_origin = req.headers().contains_key(&header::ORIGIN);
+                // let has_origin = req.headers().contains_key(&header::ORIGIN);
                 let allowed_origin = inner.access_control_allow_origin(req.headers());
 
                 Either::Right(
                     async move {
                         let mut res = ctx.call(&self.service, req).await?;
 
-                        if has_origin {
-                            inner.handle_response(res.headers_mut(), allowed_origin);
-                        }
+                        // if has_origin {
+                        inner.handle_response(res.headers_mut(), allowed_origin);
+                        // }
                         Ok(res)
                     }
                     .boxed_local(),
