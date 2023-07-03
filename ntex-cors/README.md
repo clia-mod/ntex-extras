@@ -19,7 +19,7 @@ It doesn't require an 'ORIGIN' header to produce CORS header.
 ## A loose config example
 
 ```toml
-ntex-cors = { package = "clia-ntex-cors-mod", version = "0.3" }
+ntex-cors = { package = "clia-ntex-cors-mod", version = "0.4" }
 ```
 
 ```rust
